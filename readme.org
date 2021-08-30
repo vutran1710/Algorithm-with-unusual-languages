@@ -1,0 +1,15 @@
+#+OPTIONS: ^:nil
+#+TITLE: Algorithm daily challenges with unusual languages
+#+DATE: <2018-07-31 Tue>
+#+AUTHOR: Vu Tran
+#+EMAIL: me@vutr.io`
+
+* Content                                                               :TOC:
+- [[#introduction][Introduction]]
+- [[#algorithm-challenges][Algorithm challenges]]
+
+* Introduction
+Solving daily algorithm challenges with unusual languages (Javascript/Typesript is strictly prohibited)
+
+* Algorithm challenges
+- [[https://www.hackerrank.com/challenges/migratory-birds/problem][MigratoryBirds]] ([[file:/clojure/src/clj_algo/core.clj#3][clojure]])
