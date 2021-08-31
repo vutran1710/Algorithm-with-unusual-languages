@@ -13,4 +13,4 @@ Solving daily algorithm challenges with unusual languages (Javascript/Typesript 
 
 * Algorithm challenges
 - [[https://www.hackerrank.com/challenges/migratory-birds/problem][MigratoryBirds]] ([[file:/clojure/src/clj_algo/core.clj#3][clojure]])
-- [[https://www.hackerrank.com/challenges/migratory-birds/problem][Divisible Sum Pairs]] ([[file:/python/divisible_sum_pairs.py#3][python]])
+- [[https://www.hackerrank.com/challenges/migratory-birds/problem][Divisible Sum Pairs]] ([[file:/python/divisible_sum_pairs.py#3][python]]) ([[clojure/src/core.clj#13][clojure]])

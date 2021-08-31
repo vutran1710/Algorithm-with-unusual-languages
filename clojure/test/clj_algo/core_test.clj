@@ -4,4 +4,13 @@
 
 (deftest a-test
   (testing "FIXME, I fail."
-    (is (= 0 1))))
+    (is (zero? 1))))
+
+(deftest test-divisible-sum-pairs
+  (testing "Test divisibleSumPairs"
+    (let [n        6
+          k        3
+          ar       [1 3 2 6 1 2]
+          expected 5
+          actual   (divisibleSumPairs n k ar)]
+      (is (= actual expected)))))
