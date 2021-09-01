@@ -11,7 +11,7 @@
     (key (apply max-key val cnt))))
 
 (defn divisibleSumPairs
-  "https://www.hackerrank.com/challenges/divisible-sum-pairs1"
+  "https://www.hackerrank.com/challenges/divisible-sum-pairs"
   [n k ar]
 
   (let [divisible? (fn [x1 x2 k]
@@ -24,3 +24,13 @@
          (+ cnt should-inc)))
      0
      ar)))
+
+(defn bonAppetit
+  "https://www.hackerrank.com/challenges/bon-appetit/problem"
+
+  [bill k b]
+  (let [total-cost (reduce + bill)
+        anna-share (/ (- total-cost (nth bill k)) 2)
+        dif        (- b anna-share)
+        output     (if (zero? dif) "Bon Appetit" dif)]
+    (println output)))
