@@ -15,3 +15,4 @@ Solving daily algorithm challenges with unusual languages (Javascript/Typesript 
 - [[https://www.hackerrank.com/challenges/migratory-birds/problem][MigratoryBirds]] ([[file:/clojure/src/clj_algo/core.clj#3][clojure]])
 - [[https://www.hackerrank.com/challenges/divisible-sum-pairs/problem][Divisible Sum Pairs]] ([[file:/python/divisible_sum_pairs.py#3][python]]) ([[clojure/src/clj_algo/core.clj#13][clojure]])
 - [[https://www.hackerrank.com/challenges/bon-appetit/problem][Bill Division]] ([[file:/python/bon_appetit.py#3][python]]) ([[clojure/src/clj_algo/core.clj#28][clojure]])
+- [[https://www.hackerrank.com/challenges/picking-numbers/problem][Picking Numbers]] ([[file:/python/picking_numbers.py#3][python]]) ([[clojure/src/clj_algo/core.clj#28][clojure]])
