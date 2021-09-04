@@ -41,22 +41,21 @@
   "https://www.hackerrank.com/challenges/picking-numbers/problem"
   [a]
 
-  (let [occur (frequencies a)
-        keyes (sort < (keys occur))
-        idxes (range (dec (count keyes)))]
+  (let [occur   (frequencies a)
+        keyes   (sort < (keys occur))
+        indexes (range (dec (count keyes)))]
     (if (= 1 (count keyes))
       (first (vals occur))
       (reduce
-        (fn [res i]
-          (let [k1  (nth keyes i)
-                k2  (nth keyes (inc i))
-                v1  (get occur k1)
-                v2  (get occur k2)
-                cnt (+ v1 v2)]
-            (println res i ">>>" k1 k2 v1 v2 cnt)
-            (if (and
-                  (>= 1 (abs (- k1 k2)))
-                  (> cnt res))
-              cnt res)))
-        0
-        idxes))))
+       (fn [res i]
+         (let [k1   (nth keyes i)
+               k2   (nth keyes (inc i))
+               v1   (get occur k1)
+               v2   (get occur k2)
+               cnt  (+ v1 v2)
+               diff (abs (- k1 k2))]
+           (cond
+             (= 1 diff) (max res cnt)
+             (< 1 diff) (max v1 v2 res))))
+       0
+       indexes))))
