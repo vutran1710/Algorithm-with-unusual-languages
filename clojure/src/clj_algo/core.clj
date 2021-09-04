@@ -1,7 +1,15 @@
 (ns clj-algo.core)
-;; libs
-(defn abs [n] (max n (- n)))
 
+;; Supporting functions
+(defn abs
+  [n]
+  (max n (- n)))
+
+(defn find-first
+  [f coll]
+  (first (filter f coll)))
+
+;; Solutions
 (defn migratoryBirds
   "Problem at https://www.hackerrank.com/challenges/migratory-birds"
   [arr]
@@ -19,13 +27,13 @@
   (let [divisible? (fn [x1 x2 k]
                      (zero? (mod (+ x1 x2) k)))]
     (reduce-kv
-      (fn [cnt idx num]
-        (let [sub-ar     (subvec ar (inc idx))
-              matches    (filter #(divisible? num % k) sub-ar)
-              should-inc (count matches)]
-          (+ cnt should-inc)))
-      0
-      ar)))
+     (fn [cnt idx num]
+       (let [sub-ar     (subvec ar (inc idx))
+             matches    (filter #(divisible? num % k) sub-ar)
+             should-inc (count matches)]
+         (+ cnt should-inc)))
+     0
+     ar)))
 
 (defn bonAppetit
   "https://www.hackerrank.com/challenges/bon-appetit/problem"
@@ -33,8 +41,8 @@
   [bill k b]
   (let [total-cost (reduce + bill)
         anna-share (/ (- total-cost (nth bill k)) 2)
-        dif        (- b anna-share)
-        output     (if (zero? dif) "Bon Appetit" dif)]
+        diff       (- b anna-share)
+        output     (if (zero? diff) "Bon Appetit" diff)]
     (println output)))
 
 (defn pickingNumbers
@@ -59,3 +67,15 @@
              (< 1 diff) (max v1 v2 res))))
        0
        indexes))))
+
+(defn permutationEquation
+  "https://www.hackerrank.com/challenges/permutation-equation/problem"
+  [p]
+
+  (let [x (range 1 (inc (count p)))]
+    (map
+     (fn [v]
+       (let [ix (find-first #(= (nth p (dec %)) v) x)
+             ex (find-first #(= (nth p (dec %)) ix) x)]
+         ex))
+     x)))
