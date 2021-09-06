@@ -79,3 +79,9 @@
              ex (find-first #(= (nth p (dec %)) ix) x)]
          ex))
      x)))
+
+(defn saveThePrisoner
+  "https://www.hackerrank.com/challenges/save-the-prisoner/problem
+  Dmm hoi anh Hieu!!! Review sin cos Math"
+  [n m s]
+  (inc (mod (+ s m -2) n)))
