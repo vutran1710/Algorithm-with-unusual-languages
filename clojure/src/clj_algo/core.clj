@@ -85,3 +85,48 @@
   Dmm hoi anh Hieu!!! Review sin cos Math"
   [n m s]
   (inc (mod (+ s m -2) n)))
+
+(defn minimumNumber
+  "https://www.hackerrank.com/challenges/strong-password/problem"
+  [n password]
+  (let [count-upper-chars (atom 0)
+        count-lower-chars (atom 0)
+        count-numberic    (atom 0)
+        count-special     (atom 0)
+        check-char        (reduce
+                           (fn [res char]
+                             (cond
+                               (and
+                                (zero? @count-lower-chars)
+                                (re-find #"[a-z]" (str char)))
+                               (do
+                                 (reset! count-lower-chars 1)
+                                 (dec res))
+
+                               (and
+                                (zero? @count-upper-chars)
+                                (re-find #"[A-Z]" (str char)))
+                               (do
+                                 (reset! count-upper-chars 1)
+                                 (dec res))
+
+                               (and
+                                (zero? @count-numberic)
+                                (re-find #"[0-9]" (str char)))
+                               (do
+                                 (reset! count-numberic 1)
+                                 (dec res))
+
+                               (and
+                                (zero? @count-special)
+                                (clojure.string/includes?  "!@#$%^&*()-+" (str char)))
+                               (do
+                                 (reset! count-special 1)
+                                 (dec res))
+
+                               :default res))
+                           4 password)
+        missing-count (if (>= (count password) 6)
+                        0 (- 6 (count password)))]
+
+    (max missing-count check-char)))
