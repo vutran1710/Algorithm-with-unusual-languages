@@ -3,28 +3,27 @@ lower_case = "abcdefghijklmnopqrstuvwxyz"
 upper_case = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 special_characters = "!@#$%^&*()-+"
 
-def minimumNumber(nn, password):
-    # Return the minimum number of characters to make the password strong
-    l = False
-    u = False
-    n = False
-    s = False
+def minimumNumber(n, password):
+    low = False
+    upp = False
+    num = False
+    spe = False
     count = 4
     for c in password:
-        if lower_case.__contains__(c) and not l:
-            l = True
+        if c in lower_case and not low:
+            low = True
             count -= 1
             continue
-        if upper_case.__contains__(c) and not u:
-            u = True
+        if c in upper_case and not upp:
+            upp = True
             count -= 1
             continue
-        if numbers.__contains__(c) and not n:
-            n = True
+        if c in numbers and not num:
+            num = True
             count -= 1
             continue
-        if special_characters.__contains__(c) and not s:
-            s = True
+        if c in special_characters and not spe:
+            spe = True
             count -= 1
             
-    return count if nn + count >= 6 else 6 - nn
+    return count if n + count >= 6 else 6 - n
