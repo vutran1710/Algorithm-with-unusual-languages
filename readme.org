@@ -19,4 +19,4 @@ Solving daily algorithm challenges with unusual languages (Javascript/Typesript 
 - [[https://www.hackerrank.com/challenges/permutation-equation/problem][Permutation Equation]] ([[file:/python/permutation_equation.py][python]]) ([[clojure/src/clj_algo/core.clj#L69][clojure]])
 - [[https://www.hackerrank.com/challenges/save-the-prisoner/problem][Save the Prisoner]] ([[file:/python/save_the_prisioner.py][python]]) ([[clojure/src/clj_algo/core.clj#L83][clojure]])
 - [[https://www.hackerrank.com/challenges/strong-password/problem][Strong password]] ([[file:/python/strong_password.py][python]]) ([[clojure/src/clj_algo/core.clj#L89][clojure]])
-- [[https://www.hackerrank.com/challenges/queens-attack-2/problem][Queen's Attack II]] ([[file:/python/queen_attack_2.py][python]])
+- [[https://www.hackerrank.com/challenges/queens-attack-2/problem][Queen's Attack II]] ([[file:/python/queen_attack_2.py][python]]) ([[clojure/src/clj_algo/algo_2.clj#L4][clojure]])
