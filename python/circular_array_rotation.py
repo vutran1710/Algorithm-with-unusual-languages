@@ -1,14 +1,5 @@
-def circularArrayRotation(a, k, queries):
-    len_a = len(a)
-    if k > len(a):
-        k = k % len_a
-        
-    first = a[len_a - k:]
-    last = a[:len_a - k]
-    join = first + last
-    
-    q = []
-    for i in queries:
-        q.append(join[i])
+def calculate_index(arr, q, k):
+    return (q - k) % len(arr)
 
-    return q
+def circularArrayRotation(a, k, queries):
+    return [a[calculate_index(a, q, k)] for q in queries]
