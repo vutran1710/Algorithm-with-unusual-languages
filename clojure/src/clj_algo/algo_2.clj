@@ -30,3 +30,17 @@
                  (queenAttackSearch queen-cord bounds obs-set [x y])
                  @result))))
     @result))
+
+(defn translate-index [q k length-a]
+  (let [idx (atom (- q k))]
+    (while (neg? @idx)
+      (reset! idx (+ length-a @idx)))
+    @idx))
+
+(defn circularArrayRotation
+  "https://www.hackerrank.com/challenges/circular-array-rotation/problem"
+  [a k queries]
+  (let [length-a (count a)]
+    (map
+     #(nth a (translate-index % k length-a))
+     queries)))
