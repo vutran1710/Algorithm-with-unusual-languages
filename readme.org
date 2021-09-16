@@ -23,3 +23,4 @@ Solving daily algorithm challenges with unusual languages (Javascript/Typesript 
 - [[https://www.hackerrank.com/challenges/the-grid-search/problem][The Grid Search]] ([[file:/python/grid_search.py][python]])
 - [[https://www.hackerrank.com/challenges/stockmax/problem][Stock Maximize]] ([[file:/python/stock_maximize.py][python]])
 - [[https://www.hackerrank.com/challenges/circular-array-rotation/problem][Circular Array Rotation]] ([[file:/python/circular_array_rotation.py][python]]) ([[clojure/src/clj_algo/algo_2.clj#L40][clojure]])
+- [[https://www.hackerrank.com/challenges/3d-surface-area/problem][3D Surface Area]] ([[file:/python/surface_area.py][python]])
