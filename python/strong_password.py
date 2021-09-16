@@ -3,6 +3,7 @@ lower_case = "abcdefghijklmnopqrstuvwxyz"
 upper_case = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 special_characters = "!@#$%^&*()-+"
 
+
 def minimumNumber(n, password):
     low = False
     upp = False
@@ -25,5 +26,5 @@ def minimumNumber(n, password):
         if c in special_characters and not spe:
             spe = True
             count -= 1
-            
+
     return count if n + count >= 6 else 6 - n

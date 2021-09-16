@@ -1,6 +1,6 @@
 def migratoryBirds(arr):
     collections = {}
-    
+
     for i in arr:
         if i in collections:
             collections[i] += 1
@@ -18,5 +18,5 @@ def migratoryBirds(arr):
         if maxx < v or maxx == v and minn > k:
             minn = k
             maxx = v
-        
+
     return minn

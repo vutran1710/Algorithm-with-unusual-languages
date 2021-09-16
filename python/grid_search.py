@@ -7,24 +7,24 @@ def gridSearch(G, P):
             break
 
         start = 0
-        
-        while start <= (len(row)-pattern_len):
+
+        while start <= (len(row) - pattern_len):
             find_idx = row.find(P[0], start)
-            
+
             if find_idx >= 0:
                 check = True
-                
+
                 for n in range(1, len(P)):
-                    next_row = G[idx+n]
-                    substring = next_row[find_idx:find_idx+pattern_len]
-                    
+                    next_row = G[idx + n]
+                    substring = next_row[find_idx : find_idx + pattern_len]
+
                     if substring != P[n]:
                         check = False
                         break
-                        
+
                 if check:
-                    return 'YES'
-    
+                    return "YES"
+
             start += 1
-            
-    return 'NO'
+
+    return "NO"
